@@ -12,11 +12,6 @@
     >
 
     <style>
-        /* =========================================================
-           ARKON – OFFIZIELLE STAATSPRÄSENZ
-           Version 2.0
-           ========================================================= */
-
         :root {
             --black: #07090c;
             --black-2: #0b0e13;
@@ -40,10 +35,6 @@
             --max-width: 1200px;
         }
 
-        /* =========================================================
-           RESET
-           ========================================================= */
-
         * {
             margin: 0;
             padding: 0;
@@ -55,11 +46,7 @@
         }
 
         body {
-            font-family:
-                Arial,
-                Helvetica,
-                sans-serif;
-
+            font-family: Arial, Helvetica, sans-serif;
             background:
                 radial-gradient(
                     circle at 50% -10%,
@@ -71,7 +58,6 @@
                     var(--black),
                     var(--black-2)
                 );
-
             color: var(--white);
             line-height: 1.6;
             overflow-x: hidden;
@@ -82,10 +68,6 @@
             text-decoration: none;
         }
 
-        button {
-            font-family: inherit;
-        }
-
         img {
             max-width: 100%;
         }
@@ -94,10 +76,6 @@
             background: var(--gold);
             color: var(--black);
         }
-
-        /* =========================================================
-           SCROLLBAR
-           ========================================================= */
 
         ::-webkit-scrollbar {
             width: 9px;
@@ -125,7 +103,6 @@
             left: 0;
             width: 100%;
             height: 82px;
-
             z-index: 1000;
 
             background: rgba(7, 9, 12, 0.92);
@@ -148,22 +125,16 @@
             justify-content: space-between;
         }
 
-        /* =========================================================
-           BRAND
-           ========================================================= */
-
         .brand {
             display: flex;
             align-items: center;
             gap: 13px;
-
             min-width: max-content;
         }
 
         .brand img {
             width: 48px;
             height: 48px;
-
             object-fit: contain;
         }
 
@@ -174,19 +145,15 @@
 
         .brand-title {
             font-family: Georgia, "Times New Roman", serif;
-
             font-size: 18px;
             letter-spacing: 2px;
-
             text-transform: uppercase;
         }
 
         .brand-subtitle {
             color: var(--gold);
-
             font-size: 9px;
             letter-spacing: 3px;
-
             text-transform: uppercase;
         }
 
@@ -199,7 +166,6 @@
 
             display: flex;
             align-items: center;
-
             gap: 27px;
         }
 
@@ -210,7 +176,6 @@
 
             font-size: 11px;
             letter-spacing: 1.5px;
-
             text-transform: uppercase;
 
             transition: 0.25s ease;
@@ -220,7 +185,6 @@
             content: "";
 
             position: absolute;
-
             left: 0;
             bottom: -7px;
 
@@ -256,7 +220,6 @@
             align-items: center;
 
             position: relative;
-
             overflow: hidden;
         }
 
@@ -364,7 +327,6 @@
 
         .hero h1 span {
             display: block;
-
             color: var(--gold-light);
         }
 
@@ -418,7 +380,6 @@
         .button-primary:hover {
             background: var(--gold-light);
             border-color: var(--gold-light);
-
             transform: translateY(-2px);
         }
 
@@ -428,7 +389,6 @@
 
         .button-secondary:hover {
             background: rgba(200,168,91,0.08);
-
             transform: translateY(-2px);
         }
 
@@ -575,7 +535,7 @@
         }
 
         /* =========================================================
-           STATE DATA
+           STAAT
            ========================================================= */
 
         #staat {
@@ -586,6 +546,110 @@
 
             border-bottom:
                 1px solid rgba(255,255,255,0.04);
+        }
+
+        /* GROẞE BÜRGERZAHL */
+
+        .citizen-highlight {
+            position: relative;
+
+            margin-bottom: 25px;
+
+            min-height: 230px;
+
+            padding: 35px 45px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            overflow: hidden;
+
+            background:
+                radial-gradient(
+                    circle at 75% 50%,
+                    rgba(200,168,91,0.11),
+                    transparent 45%
+                ),
+                linear-gradient(
+                    135deg,
+                    #151a21,
+                    #0d1116
+                );
+
+            border: 1px solid var(--border);
+        }
+
+        .citizen-highlight::before {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            top: 0;
+            bottom: 0;
+
+            width: 3px;
+
+            background: var(--gold);
+        }
+
+        .citizen-label {
+            color: var(--gold);
+
+            font-size: 10px;
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 8px;
+        }
+
+        .citizen-description {
+            color: var(--gray);
+
+            font-size: 13px;
+        }
+
+        .citizen-number {
+            position: relative;
+            z-index: 2;
+
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-size:
+                clamp(
+                    90px,
+                    12vw,
+                    145px
+                );
+
+            line-height: 0.8;
+
+            color: var(--gold-light);
+
+            letter-spacing: -8px;
+
+            text-shadow:
+                0 0 50px
+                rgba(200,168,91,0.12);
+        }
+
+        .citizen-word {
+            position: absolute;
+
+            right: 42px;
+            bottom: 20px;
+
+            color: var(--gold-dark);
+
+            font-size: 9px;
+            letter-spacing: 4px;
+
+            text-transform: uppercase;
         }
 
         .state-grid {
@@ -644,10 +708,6 @@
             margin-top: 3px;
         }
 
-        /* =========================================================
-           STATE DESCRIPTION
-           ========================================================= */
-
         .state-description {
             margin-top: 25px;
 
@@ -673,7 +733,6 @@
 
         .content-card:hover {
             border-color: var(--border);
-
             transform: translateY(-4px);
         }
 
@@ -691,12 +750,11 @@
 
         .content-card p {
             color: var(--gray);
-
             font-size: 14px;
         }
 
         /* =========================================================
-           HISTORY
+           GESCHICHTE
            ========================================================= */
 
         #geschichte {
@@ -789,7 +847,7 @@
         }
 
         /* =========================================================
-           GOVERNMENT
+           REGIERUNG
            ========================================================= */
 
         #regierung {
@@ -847,7 +905,6 @@
 
         .hierarchy-item:hover {
             border-color: var(--border);
-
             transform: scale(1.01);
         }
 
@@ -881,17 +938,14 @@
 
         .hierarchy-subtitle {
             color: var(--gray);
-
             font-size: 11px;
         }
 
         .hierarchy-arrow {
             height: 35px;
-
             width: 1px;
 
             background: var(--gold);
-
             opacity: 0.55;
         }
 
@@ -953,7 +1007,91 @@
         }
 
         /* =========================================================
-           MILITÄR
+           ARKON-SYSTEM
+           ========================================================= */
+
+        #system {
+            background: #0c1015;
+        }
+
+        .territory-note {
+            margin-bottom: 35px;
+
+            padding: 25px 30px;
+
+            border-left: 2px solid var(--gold);
+
+            background: var(--dark);
+
+            color: var(--gray);
+
+            font-size: 14px;
+        }
+
+        .territory-note strong {
+            color: var(--gold-light);
+            font-weight: 400;
+        }
+
+        .system-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap: 20px;
+        }
+
+        .system-card {
+            padding: 30px;
+
+            background: var(--dark);
+
+            border:
+                1px solid
+                var(--border-light);
+
+            transition: 0.3s ease;
+        }
+
+        .system-card:hover {
+            border-color: var(--border);
+            transform: translateY(-4px);
+        }
+
+        .system-number {
+            color: var(--gold);
+
+            font-family: Georgia, serif;
+
+            font-size: 27px;
+
+            margin-bottom: 13px;
+        }
+
+        .system-card h3 {
+            font-family:
+                Georgia,
+                "Times New Roman",
+                serif;
+
+            font-weight: 400;
+
+            font-size: 21px;
+
+            margin-bottom: 9px;
+        }
+
+        .system-card p {
+            color: var(--gray);
+            font-size: 13px;
+        }
+
+        /* =========================================================
+           AVK
            ========================================================= */
 
         #militaer {
@@ -990,7 +1128,7 @@
         }
 
         .military-main::after {
-            content: "ARKON";
+            content: "AVK";
 
             position: absolute;
 
@@ -1106,12 +1244,90 @@
 
         .military-card p {
             color: var(--gray);
-
             font-size: 12px;
         }
 
         /* =========================================================
-           SYMBOLS
+           WERBUNG / NACHRICHTEN
+           ========================================================= */
+
+        #werbung {
+            background: #0c1015;
+        }
+
+        .propaganda-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap: 20px;
+        }
+
+        .propaganda-card {
+            background: var(--dark);
+
+            border:
+                1px solid
+                var(--border-light);
+
+            overflow: hidden;
+
+            transition: 0.3s ease;
+        }
+
+        .propaganda-card:hover {
+            border-color: var(--border);
+            transform: translateY(-4px);
+        }
+
+        .propaganda-card img {
+            display: block;
+
+            width: 100%;
+
+            height: auto;
+
+            object-fit: contain;
+
+            background: #080a0d;
+        }
+
+        .propaganda-caption {
+            padding: 15px 18px;
+
+            color: var(--gold-light);
+
+            font-size: 10px;
+
+            letter-spacing: 1.5px;
+
+            text-transform: uppercase;
+        }
+
+        .propaganda-empty {
+            padding: 45px 30px;
+
+            background: var(--dark);
+
+            border:
+                1px dashed
+                var(--border);
+
+            color: var(--gray);
+
+            text-align: center;
+
+            font-size: 13px;
+
+            grid-column: 1 / -1;
+        }
+
+        /* =========================================================
+           SYMBOLE
            ========================================================= */
 
         #symbole {
@@ -1161,7 +1377,6 @@
 
         .symbol-card:hover {
             border-color: var(--border);
-
             transform: translateY(-5px);
         }
 
@@ -1218,7 +1433,7 @@
         }
 
         /* =========================================================
-           FLAG
+           FLAGGE
            ========================================================= */
 
         #flagge {
@@ -1263,12 +1478,11 @@
 
         .flag-caption strong {
             color: var(--gold-light);
-
             font-weight: 400;
         }
 
         /* =========================================================
-           CONSTITUTION
+           VERFASSUNG
            ========================================================= */
 
         #verfassung {
@@ -1314,7 +1528,6 @@
 
         .constitution-title p {
             color: var(--gray);
-
             font-size: 13px;
         }
 
@@ -1366,7 +1579,7 @@
         }
 
         /* =========================================================
-           DOCUMENTS
+           DOKUMENTE
            ========================================================= */
 
         #dokumente {
@@ -1399,7 +1612,6 @@
 
         .document-card:hover {
             border-color: var(--border);
-
             transform: translateY(-4px);
         }
 
@@ -1461,7 +1673,6 @@
                 );
 
             border-top: 1px solid var(--border);
-
             border-bottom: 1px solid var(--border);
         }
 
@@ -1619,7 +1830,7 @@
         }
 
         /* =========================================================
-           RESPONSIVE – TABLET
+           RESPONSIVE
            ========================================================= */
 
         @media (max-width: 1000px) {
@@ -1630,7 +1841,6 @@
 
             .hero-inner {
                 grid-template-columns: 1fr 300px;
-
                 gap: 45px;
             }
 
@@ -1655,15 +1865,10 @@
                     );
             }
 
-            .symbols-grid {
-                grid-template-columns:
-                    repeat(
-                        2,
-                        1fr
-                    );
-            }
-
-            .documents {
+            .symbols-grid,
+            .documents,
+            .system-grid,
+            .propaganda-grid {
                 grid-template-columns:
                     repeat(
                         2,
@@ -1671,10 +1876,6 @@
                     );
             }
         }
-
-        /* =========================================================
-           RESPONSIVE – MOBILE
-           ========================================================= */
 
         @media (max-width: 780px) {
 
@@ -1688,13 +1889,11 @@
                     18px;
 
                 flex-direction: column;
-
                 gap: 12px;
             }
 
             .brand {
                 width: 100%;
-
                 justify-content: center;
             }
 
@@ -1745,6 +1944,32 @@
                 height: 220px;
             }
 
+            .citizen-highlight {
+                min-height: 210px;
+
+                padding: 30px;
+
+                flex-direction: column;
+
+                align-items: flex-start;
+
+                justify-content: center;
+            }
+
+            .citizen-number {
+                position: absolute;
+
+                right: 25px;
+                bottom: 20px;
+
+                font-size: 90px;
+            }
+
+            .citizen-word {
+                right: 25px;
+                bottom: 10px;
+            }
+
             .state-grid,
             .state-description,
             .military-layout,
@@ -1754,7 +1979,9 @@
 
             .ministries,
             .symbols-grid,
-            .documents {
+            .documents,
+            .system-grid,
+            .propaganda-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1768,7 +1995,6 @@
 
             .footer-grid {
                 grid-template-columns: 1fr;
-
                 gap: 35px;
             }
 
@@ -1776,10 +2002,6 @@
                 flex-direction: column;
             }
         }
-
-        /* =========================================================
-           RESPONSIVE – SMALL MOBILE
-           ========================================================= */
 
         @media (max-width: 450px) {
 
@@ -1796,7 +2018,6 @@
 
             .hero h1 {
                 font-size: 47px;
-
                 letter-spacing: -2px;
             }
 
@@ -1821,10 +2042,14 @@
             .flag-caption {
                 flex-direction: column;
             }
+
+            .citizen-number {
+                font-size: 75px;
+                right: 20px;
+            }
         }
     </style>
 </head>
-
 
 <body>
 
@@ -1861,45 +2086,40 @@
 
             </a>
 
-
             <nav aria-label="Hauptnavigation">
 
                 <ul>
 
                     <li>
-                        <a href="#staat">
-                            Staat
-                        </a>
+                        <a href="#staat">Staat</a>
                     </li>
 
                     <li>
-                        <a href="#geschichte">
-                            Geschichte
-                        </a>
+                        <a href="#geschichte">Geschichte</a>
                     </li>
 
                     <li>
-                        <a href="#regierung">
-                            Regierung
-                        </a>
+                        <a href="#regierung">Regierung</a>
                     </li>
 
                     <li>
-                        <a href="#militaer">
-                            Militär
-                        </a>
+                        <a href="#system">Gebiet</a>
                     </li>
 
                     <li>
-                        <a href="#symbole">
-                            Symbole
-                        </a>
+                        <a href="#militaer">AVK</a>
                     </li>
 
                     <li>
-                        <a href="#verfassung">
-                            Verfassung
-                        </a>
+                        <a href="#werbung">Nachrichten</a>
+                    </li>
+
+                    <li>
+                        <a href="#symbole">Symbole</a>
+                    </li>
+
+                    <li>
+                        <a href="#verfassung">Verfassung</a>
                     </li>
 
                 </ul>
@@ -1911,24 +2131,15 @@
     </header>
 
 
-    <!-- =========================================================
-         MAIN
-         ========================================================= -->
-
     <main>
-
 
         <!-- =====================================================
              HERO
              ===================================================== -->
 
-        <section
-            class="hero"
-            id="start"
-        >
+        <section class="hero" id="start">
 
             <div class="hero-inner">
-
 
                 <div class="hero-content">
 
@@ -1946,10 +2157,9 @@
                         Willkommen auf der offiziellen digitalen
                         Staatspräsenz des Kanzlerstaates Arkon.
                         Informationen über Staat, Geschichte,
-                        Regierung, Ministerien, Militär,
+                        Regierung, Staatsgebiet, AVK,
                         Verfassung und staatliche Symbole.
                     </p>
-
 
                     <div class="button-row">
 
@@ -1971,7 +2181,6 @@
 
                 </div>
 
-
                 <div class="hero-emblem">
 
                     <div class="emblem-frame">
@@ -1988,7 +2197,6 @@
                     </div>
 
                 </div>
-
 
             </div>
 
@@ -2023,13 +2231,65 @@
                 </div>
 
 
+                <!-- GROẞE BÜRGERSTATISTIK -->
+
+                <div class="citizen-highlight">
+
+                    <div>
+
+                        <div class="citizen-label">
+                            Bürger des Kanzlerstaates
+                        </div>
+
+                        <div class="citizen-description">
+                            Aktuelle Zahl der registrierten Bürger
+                        </div>
+
+                    </div>
+
+                    <div class="citizen-number">
+                        41
+                    </div>
+
+                    <div class="citizen-word">
+                        Bürger
+                    </div>
+
+                </div>
+
+
                 <div class="state-grid">
+
+                    <div class="state-data">
+
+                        <div class="state-data-label">
+                            Offizieller Name
+                        </div>
+
+                        <div class="state-data-value">
+                            Kanzlerstaat Arkon
+                        </div>
+
+                    </div>
 
 
                     <div class="state-data">
 
                         <div class="state-data-label">
-                            Staatsgründung
+                            Staatsform
+                        </div>
+
+                        <div class="state-data-value">
+                            Kanzlerstaat
+                        </div>
+
+                    </div>
+
+
+                    <div class="state-data">
+
+                        <div class="state-data-label">
+                            Gründung
                         </div>
 
                         <div class="state-data-value">
@@ -2050,7 +2310,7 @@
                         </div>
 
                         <div class="state-data-small">
-                            Arkon-System
+                            Hauptstadt Arkons
                         </div>
 
                     </div>
@@ -2063,28 +2323,11 @@
                         </div>
 
                         <div class="state-data-value">
-                            Arkon-System
+                            Mehrteilig
                         </div>
 
                         <div class="state-data-small">
-                            No Man’s Sky
-                        </div>
-
-                    </div>
-
-
-                    <div class="state-data">
-
-                        <div class="state-data-label">
-                            Bürger
-                        </div>
-
-                        <div class="state-data-value">
-                            6
-                        </div>
-
-                        <div class="state-data-small">
-                            registrierte Staatsbürger
+                            u. a. das Arkon-System
                         </div>
 
                     </div>
@@ -2110,24 +2353,7 @@
                         </div>
 
                         <div class="state-data-value">
-                            Deutsch
-                        </div>
-
-                        <div class="state-data-small">
-                            Englisch
-                        </div>
-
-                    </div>
-
-
-                    <div class="state-data">
-
-                        <div class="state-data-label">
-                            Staatsform
-                        </div>
-
-                        <div class="state-data-value">
-                            Kanzlerstaat
+                            Deutsch & Englisch
                         </div>
 
                     </div>
@@ -2146,11 +2372,26 @@
                     </div>
 
 
+                    <div class="state-data">
+
+                        <div class="state-data-label">
+                            Militär
+                        </div>
+
+                        <div class="state-data-value">
+                            AVK
+                        </div>
+
+                        <div class="state-data-small">
+                            Arkonische Verteidigungskräfte
+                        </div>
+
+                    </div>
+
                 </div>
 
 
                 <div class="state-description">
-
 
                     <article class="content-card">
 
@@ -2182,7 +2423,6 @@
                         </p>
 
                     </article>
-
 
                 </div>
 
@@ -2218,7 +2458,6 @@
 
 
                 <div class="timeline">
-
 
                     <div class="timeline-item">
 
@@ -2281,7 +2520,6 @@
 
                     </div>
 
-
                 </div>
 
             </div>
@@ -2307,19 +2545,27 @@
                         Regierung des Kanzlerstaates
                     </h2>
 
+                    <p class="section-intro">
+                        Die staatliche Führung Arkons ist hierarchisch
+                        organisiert. Jedes Amt besitzt einen eigenen
+                        Zuständigkeitsbereich innerhalb der staatlichen
+                        Ordnung.
+                    </p>
+
                 </div>
 
 
                 <p class="government-intro">
-                    Die staatliche Führung Arkons ist hierarchisch
-                    organisiert. An der Spitze steht der Oberste Kanzler.
-                    Ihm folgen die weiteren staatlichen Ämter gemäß
-                    der arkonesischen Regierungsordnung.
+                    An der Spitze des Kanzlerstaates steht der Oberste
+                    Kanzler. Unterhalb des Staatsoberhauptes folgen
+                    Bundesadministration und Ministerien. Die einzelnen
+                    Ämter übernehmen zentrale Aufgaben in Verwaltung,
+                    inneren Angelegenheiten, Finanzen sowie staatlicher
+                    Kommunikation.
                 </p>
 
 
                 <div class="hierarchy">
-
 
                     <div class="hierarchy-item">
 
@@ -2355,7 +2601,7 @@
                             </div>
 
                             <div class="hierarchy-subtitle">
-                                Zweithöchste staatliche Funktion
+                                Zentrale staatliche Verwaltung und Koordination
                             </div>
                         </div>
 
@@ -2377,7 +2623,7 @@
                             </div>
 
                             <div class="hierarchy-subtitle">
-                                Innere Angelegenheiten und Verwaltung
+                                Innere Angelegenheiten und staatliche Ordnung
                             </div>
                         </div>
 
@@ -2399,7 +2645,7 @@
                             </div>
 
                             <div class="hierarchy-subtitle">
-                                Finanzen und Staatsmark
+                                Staatsfinanzen und Staatsmark
                             </div>
                         </div>
 
@@ -2417,39 +2663,38 @@
 
                         <div>
                             <div class="hierarchy-title">
-                                Propagandaminister
+                                Staatsnachrichten & Werbeminister
                             </div>
 
                             <div class="hierarchy-subtitle">
-                                Staatliche Kommunikation und Information
+                                Staatsnachrichten, Information und Werbung
                             </div>
                         </div>
 
                     </div>
 
-
                 </div>
 
 
-                <!-- MINISTERIEN -->
-
                 <div class="ministries">
 
-
                     <article class="ministry">
 
                         <div class="ministry-number">
-                            MINISTERIUM 01
+                            AMT 01
                         </div>
 
                         <h3>
-                            Bundesinnenministerium
+                            Oberster Kanzler
                         </h3>
 
                         <p>
-                            Zuständig für innere Verwaltung,
-                            staatliche Ordnung und innere
-                            Angelegenheiten.
+                            Der Oberste Kanzler steht an der Spitze des
+                            Kanzlerstaates. Er übernimmt die oberste
+                            staatliche Führung, vertritt die staatliche
+                            Ordnung und bestimmt die grundlegende
+                            politische und organisatorische Ausrichtung
+                            Arkons.
                         </p>
 
                     </article>
@@ -2458,16 +2703,19 @@
                     <article class="ministry">
 
                         <div class="ministry-number">
-                            MINISTERIUM 02
+                            AMT 02
                         </div>
 
                         <h3>
-                            Finanzministerium
+                            Bundesadministrator
                         </h3>
 
                         <p>
-                            Verantwortlich für die staatlichen
-                            Finanzen und die Staatsmark.
+                            Der Bundesadministrator koordiniert die
+                            zentrale Verwaltung und unterstützt die
+                            Umsetzung staatlicher Entscheidungen.
+                            Er verbindet die verschiedenen
+                            Verwaltungsbereiche miteinander.
                         </p>
 
                     </article>
@@ -2476,16 +2724,18 @@
                     <article class="ministry">
 
                         <div class="ministry-number">
-                            MINISTERIUM 03
+                            AMT 03
                         </div>
 
                         <h3>
-                            Ministerium für Staatskommunikation
+                            Bundesinnenminister
                         </h3>
 
                         <p>
-                            Verantwortlich für offizielle staatliche
-                            Kommunikation und Informationsarbeit.
+                            Der Bundesinnenminister ist für innere
+                            Angelegenheiten, staatliche Ordnung,
+                            interne Verwaltung und die organisatorische
+                            Entwicklung innerhalb Arkons zuständig.
                         </p>
 
                     </article>
@@ -2494,20 +2744,63 @@
                     <article class="ministry">
 
                         <div class="ministry-number">
-                            MINISTERIUM 04
+                            AMT 04
                         </div>
 
                         <h3>
-                            Weitere Ministerien
+                            Finanzminister
                         </h3>
 
                         <p>
-                            Weitere staatliche Ressorts können mit
-                            der Entwicklung Arkons eingerichtet werden.
+                            Der Finanzminister verwaltet die staatlichen
+                            Finanzen, beschäftigt sich mit Einnahmen und
+                            Ausgaben und ist für die Organisation der
+                            Staatsmark innerhalb des staatlichen Systems
+                            verantwortlich.
                         </p>
 
                     </article>
 
+
+                    <article class="ministry">
+
+                        <div class="ministry-number">
+                            AMT 05
+                        </div>
+
+                        <h3>
+                            Staatsnachrichten & Werbeminister
+                        </h3>
+
+                        <p>
+                            Dieses Amt verantwortet staatliche
+                            Nachrichten, offizielle Bekanntmachungen,
+                            Informationsmaterial und die öffentliche
+                            Werbung für staatliche Projekte und
+                            Aktivitäten Arkons.
+                        </p>
+
+                    </article>
+
+
+                    <article class="ministry">
+
+                        <div class="ministry-number">
+                            VERWALTUNG
+                        </div>
+
+                        <h3>
+                            Weitere Ressorts
+                        </h3>
+
+                        <p>
+                            Weitere Ministerien und staatliche Ämter
+                            können mit der zukünftigen Entwicklung
+                            des Kanzlerstaates eingerichtet und
+                            organisatorisch festgelegt werden.
+                        </p>
+
+                    </article>
 
                 </div>
 
@@ -2517,7 +2810,199 @@
 
 
         <!-- =====================================================
-             MILITÄR
+             STAATSGEBIET / ARKON-SYSTEM
+             ===================================================== -->
+
+        <section id="system">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="section-label">
+                        Staatsgebiet
+                    </div>
+
+                    <h2>
+                        Gebiet des Kanzlerstaates
+                    </h2>
+
+                    <p class="section-intro">
+                        Das Staatsgebiet des Kanzlerstaates Arkon besteht
+                        aus mehreren Bereichen. Das Arkon-System stellt
+                        dabei nur einen Teil des gesamten Staatsgebiets dar.
+                    </p>
+
+                </div>
+
+
+                <div class="territory-note">
+
+                    <strong>
+                        Staatsgebiet:
+                    </strong>
+
+                    Das Arkon-System ist nicht mit dem gesamten
+                    Staatsgebiet Arkons gleichzusetzen. Es ist ein
+                    eigener Teil des Gebiets. Die Hauptstadt
+                    <strong>Ehrenfels</strong> ist die Hauptstadt des
+                    Kanzlerstaates und liegt außerhalb des Arkon-Systems.
+
+                </div>
+
+
+                <div class="system-grid">
+
+
+                    <article class="system-card">
+
+                        <div class="system-number">
+                            I
+                        </div>
+
+                        <h3>
+                            Das Arkon-System
+                        </h3>
+
+                        <p>
+                            Das Arkon-System ist ein Teil des
+                            Staatsgebiets des Kanzlerstaates Arkon.
+                            Innerhalb dieses Gebiets befinden sich
+                            verschiedene staatliche Einrichtungen,
+                            Standorte und Infrastruktur.
+                        </p>
+
+                    </article>
+
+
+                    <article class="system-card">
+
+                        <div class="system-number">
+                            II
+                        </div>
+
+                        <h3>
+                            Ehrenfels
+                        </h3>
+
+                        <p>
+                            Ehrenfels ist die Hauptstadt des
+                            Kanzlerstaates Arkon und liegt außerhalb
+                            des Arkon-Systems.
+                        </p>
+
+                    </article>
+
+
+                    <article class="system-card">
+
+                        <div class="system-number">
+                            III
+                        </div>
+
+                        <h3>
+                            Home of the Chancellor
+                        </h3>
+
+                        <p>
+                            Der Wohn- und Amtssitz des Obersten Kanzlers.
+                            Von hier aus befindet sich ein zentraler
+                            Standort der obersten staatlichen Führung.
+                        </p>
+
+                    </article>
+
+
+                    <article class="system-card">
+
+                        <div class="system-number">
+                            IV
+                        </div>
+
+                        <h3>
+                            Home of Federal Administrator
+                        </h3>
+
+                        <p>
+                            Der Standort des Bundesadministrators.
+                            Hier werden Aufgaben der staatlichen
+                            Verwaltung, Koordination und organisatorischen
+                            Umsetzung betreut.
+                        </p>
+
+                    </article>
+
+
+                    <article class="system-card">
+
+                        <div class="system-number">
+                            V
+                        </div>
+
+                        <h3>
+                            Home of Inner Minister
+                        </h3>
+
+                        <p>
+                            Der Standort des Bundesinnenministers.
+                            Hier liegen Aufgaben rund um innere
+                            Angelegenheiten, Verwaltung, Ordnung und
+                            interne staatliche Organisation.
+                        </p>
+
+                    </article>
+
+
+                    <article class="system-card">
+
+                        <div class="system-number">
+                            VI
+                        </div>
+
+                        <h3>
+                            Home of Staatsnachrichten & Werbeminister
+                        </h3>
+
+                        <p>
+                            Der Standort des Staatsnachrichten &
+                            Werbeministers. Von hier aus werden
+                            staatliche Nachrichten, Bekanntmachungen,
+                            Informationsmaterialien und Werbung
+                            organisiert.
+                        </p>
+
+                    </article>
+
+
+                    <article class="system-card">
+
+                        <div class="system-number">
+                            VII
+                        </div>
+
+                        <h3>
+                            Arkonian Prison
+                        </h3>
+
+                        <p>
+                            Das Arkonian Prison ist eine staatliche
+                            Einrichtung innerhalb des Arkon-Systems.
+                            Es gehört zur staatlichen Infrastruktur
+                            und dient innerhalb des Projekts als
+                            ausgewiesene Gefängniseinrichtung.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             AVK
              ===================================================== -->
 
         <section id="militaer">
@@ -2531,13 +3016,12 @@
                     </div>
 
                     <h2>
-                        Militär & Verteidigung
+                        AVK
                     </h2>
 
                     <p class="section-intro">
-                        Dieser Bereich dient der Darstellung der
-                        arkonesischen Verteidigungsstruktur innerhalb
-                        des staatlichen Projekts.
+                        Die Arkonischen Verteidigungskräfte bilden die
+                        militärische Organisation des Kanzlerstaates.
                     </p>
 
                 </div>
@@ -2549,20 +3033,20 @@
                     <div class="military-main">
 
                         <h3>
-                            Streitkräfte des Kanzlerstaates
+                            Arkonische Verteidigungskräfte
                         </h3>
 
                         <p>
-                            Die militärischen Strukturen Arkons befinden
-                            sich im Aufbau. Dieser Bereich kann später
-                            um Einheiten, Ränge, Ausrüstung, Fahrzeuge,
-                            Raumflotten und weitere staatliche
-                            Verteidigungsorganisationen erweitert werden.
+                            Die Arkonischen Verteidigungskräfte, kurz AVK,
+                            bilden die militärische Struktur des
+                            Kanzlerstaates Arkon. Sie dienen der
+                            Verteidigung und dem Schutz staatlicher
+                            Strukturen und Einrichtungen innerhalb des
+                            Staatsgebiets.
                         </p>
 
 
                         <div class="military-status">
-
 
                             <div class="status-box">
 
@@ -2580,11 +3064,11 @@
                             <div class="status-box">
 
                                 <span>
-                                    Einsatzgebiet
+                                    Mitglieder
                                 </span>
 
                                 <strong>
-                                    Arkon-System
+                                    Noch nicht festgelegt
                                 </strong>
 
                             </div>
@@ -2593,15 +3077,14 @@
                             <div class="status-box">
 
                                 <span>
-                                    Organisation
+                                    Einsatzgebiet
                                 </span>
 
                                 <strong>
-                                    In Entwicklung
+                                    Staatsgebiet
                                 </strong>
 
                             </div>
-
 
                         </div>
 
@@ -2614,12 +3097,14 @@
                         <article class="military-card">
 
                             <h3>
-                                Landstreitkräfte
+                                Heer (Infanterie)
                             </h3>
 
                             <p>
-                                Organisation und Schutz der
-                                arkonesischen Territorien.
+                                Die Infanterie bildet den Bereich der
+                                Landstreitkräfte und ist für den Schutz
+                                staatlicher Einrichtungen und Gebiete
+                                vorgesehen.
                             </p>
 
                         </article>
@@ -2628,12 +3113,14 @@
                         <article class="military-card">
 
                             <h3>
-                                Raumstreitkräfte
+                                Air Force (Luftwaffe)
                             </h3>
 
                             <p>
-                                Schutz und Erforschung des
-                                arkonesischen Weltraumgebiets.
+                                Die Luftwaffe übernimmt Aufgaben im
+                                Bereich der Luftverteidigung sowie der
+                                Überwachung und Unterstützung aus der
+                                Luft.
                             </p>
 
                         </article>
@@ -2642,12 +3129,30 @@
                         <article class="military-card">
 
                             <h3>
-                                Kommando & Führung
+                                Marine (Marine)
                             </h3>
 
                             <p>
-                                Militärische Führung und Koordination
-                                staatlicher Verteidigungsaufgaben.
+                                Die Marine bildet den maritimen
+                                Verteidigungsbereich und ist für
+                                entsprechende Einrichtungen und
+                                Operationen vorgesehen.
+                            </p>
+
+                        </article>
+
+
+                        <article class="military-card">
+
+                            <h3>
+                                Digitaler Verteidigungszusammenschluss
+                            </h3>
+
+                            <p>
+                                Die Cyberwaffe beschäftigt sich mit
+                                digitaler Verteidigung, dem Schutz
+                                staatlicher Systeme und der Sicherheit
+                                der digitalen Infrastruktur Arkons.
                             </p>
 
                         </article>
@@ -2656,6 +3161,42 @@
                     </div>
 
                 </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             WERBUNG / NACHRICHTEN
+             ===================================================== -->
+
+        <section id="werbung">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="section-label">
+                        Staatsnachrichten
+                    </div>
+
+                    <h2>
+                        Werbung & Nachrichten
+                    </h2>
+
+                    <p class="section-intro">
+                        Offizielle Informations- und Werbematerialien
+                        des Kanzlerstaates Arkon.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="propaganda-container"
+                    class="propaganda-grid"
+                ></div>
 
             </div>
 
@@ -2761,9 +3302,8 @@
                         </h3>
 
                         <p>
-                            Ein von Arkon geführtes historisches
-                            Symbol innerhalb der staatlichen
-                            Symbolordnung.
+                            Ein von Arkon geführtes Symbol innerhalb
+                            der staatlichen Symbolordnung.
                         </p>
 
                         <div class="symbol-code">
@@ -2870,13 +3410,15 @@
                     <div class="constitution-title">
 
                         <h3>
-                            Verfassung
+                            Noch nicht verfügbar
                         </h3>
 
                         <p>
-                            Die vollständige Verfassung kann später
-                            als eigenständiges Dokument eingebunden
-                            werden.
+                            Die offizielle Verfassung des
+                            Kanzlerstaates Arkon ist derzeit noch
+                            nicht verfügbar. Die grundlegende
+                            Verfassungsordnung befindet sich noch
+                            in Entwicklung.
                         </p>
 
                         <br>
@@ -2903,13 +3445,11 @@
                             <div>
 
                                 <strong>
-                                    Staatliche Souveränität
+                                    Verfassung
                                 </strong>
 
                                 <p>
-                                    Grundlegende Definition des
-                                    Kanzlerstaates und seiner
-                                    staatlichen Identität.
+                                    Noch nicht verfügbar.
                                 </p>
 
                             </div>
@@ -2926,13 +3466,11 @@
                             <div>
 
                                 <strong>
-                                    Staatsführung
+                                    Staatsordnung
                                 </strong>
 
                                 <p>
-                                    Festlegung der Stellung des
-                                    Obersten Kanzlers und der
-                                    staatlichen Institutionen.
+                                    Noch nicht verfügbar.
                                 </p>
 
                             </div>
@@ -2953,8 +3491,7 @@
                                 </strong>
 
                                 <p>
-                                    Grundlegende Rechte und Pflichten
-                                    der Bürger Arkons.
+                                    Noch nicht verfügbar.
                                 </p>
 
                             </div>
@@ -2971,12 +3508,11 @@
                             <div>
 
                                 <strong>
-                                    Staatliche Symbole
+                                    Staatliche Institutionen
                                 </strong>
 
                                 <p>
-                                    Regelungen über Flagge, Wappen
-                                    und weitere staatliche Insignien.
+                                    Noch nicht verfügbar.
                                 </p>
 
                             </div>
@@ -2993,12 +3529,11 @@
                             <div>
 
                                 <strong>
-                                    Staatliche Institutionen
+                                    Staatliche Symbole
                                 </strong>
 
                                 <p>
-                                    Aufbau und Zuständigkeiten der
-                                    arkonesischen Regierung.
+                                    Noch nicht verfügbar.
                                 </p>
 
                             </div>
@@ -3054,15 +3589,15 @@
                         </h3>
 
                         <p>
-                            Grundordnung und rechtliche Grundlage
-                            des Kanzlerstaates Arkon.
+                            Die Verfassung des Kanzlerstaates ist
+                            derzeit noch nicht verfügbar.
                         </p>
 
                         <a
                             href="#verfassung"
                             class="document-link"
                         >
-                            Verfassung ansehen →
+                            Status ansehen →
                         </a>
 
                     </article>
@@ -3104,8 +3639,8 @@
                         </h3>
 
                         <p>
-                            Zukünftige Übersicht über staatliche
-                            Symbole und offizielle Kennungen.
+                            Übersicht über staatliche Symbole
+                            und offizielle Kennungen.
                         </p>
 
                         <a
@@ -3140,7 +3675,6 @@
             </div>
 
         </section>
-
 
     </main>
 
@@ -3200,6 +3734,10 @@
                     Geschichte
                 </a>
 
+                <a href="#system">
+                    Staatsgebiet
+                </a>
+
                 <a href="#verfassung">
                     Verfassung
                 </a>
@@ -3221,12 +3759,12 @@
                     Staatsführung
                 </a>
 
-                <a href="#regierung">
-                    Ministerien
+                <a href="#militaer">
+                    AVK
                 </a>
 
-                <a href="#militaer">
-                    Militär
+                <a href="#werbung">
+                    Nachrichten & Werbung
                 </a>
 
                 <a href="#dokumente">
@@ -3312,7 +3850,7 @@
 
 
         /* ========================================================
-           HEADER SHADOW ON SCROLL
+           HEADER SHADOW
            ======================================================== */
 
         const siteHeader =
@@ -3337,6 +3875,136 @@
                 }
 
             }
+        );
+
+
+        /* ========================================================
+           AUTOMATISCHES PROPAGANDA-ARCHIV
+           
+           Intern:
+           Propaganda_1.png
+           Propaganda_2.png
+           Propaganda_3.png
+           usw.
+           
+           Die Dateien werden automatisch erkannt.
+           ======================================================== */
+
+        const propagandaContainer =
+            document.getElementById(
+                "propaganda-container"
+            );
+
+        const MAX_PROPAGANDA_FILES = 100;
+
+        let propagandaFound = 0;
+
+        for (
+            let i = 1;
+            i <= MAX_PROPAGANDA_FILES;
+            i++
+        ) {
+
+            const image =
+                new Image();
+
+            const fileName =
+                "Propaganda_" +
+                i +
+                ".png";
+
+            image.onload = function() {
+
+                propagandaFound++;
+
+                const card =
+                    document.createElement(
+                        "article"
+                    );
+
+                card.className =
+                    "propaganda-card";
+
+                const displayImage =
+                    document.createElement(
+                        "img"
+                    );
+
+                displayImage.src =
+                    fileName;
+
+                displayImage.alt =
+                    "Staatsnachricht " +
+                    i;
+
+                const caption =
+                    document.createElement(
+                        "div"
+                    );
+
+                caption.className =
+                    "propaganda-caption";
+
+                caption.textContent =
+                    "Staatsnachricht " +
+                    String(i).padStart(2, "0");
+
+                card.appendChild(
+                    displayImage
+                );
+
+                card.appendChild(
+                    caption
+                );
+
+                propagandaContainer.appendChild(
+                    card
+                );
+
+            };
+
+            image.onerror = function() {
+                /* Nicht vorhandene Dateien werden ignoriert. */
+            };
+
+            image.src =
+                fileName +
+                "?v=" +
+                Date.now();
+
+        }
+
+
+        /* ========================================================
+           LEERER NACHRICHTENBEREICH
+           ======================================================== */
+
+        setTimeout(
+            function() {
+
+                if (
+                    propagandaFound === 0
+                ) {
+
+                    const empty =
+                        document.createElement(
+                            "div"
+                        );
+
+                    empty.className =
+                        "propaganda-empty";
+
+                    empty.textContent =
+                        "Derzeit sind keine Staatsnachrichten veröffentlicht.";
+
+                    propagandaContainer.appendChild(
+                        empty
+                    );
+
+                }
+
+            },
+            1000
         );
 
     </script>
